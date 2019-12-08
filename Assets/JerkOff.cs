@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class JerkOff : MonoBehaviour
 {
+    // I know this is horrible but I couldn't find an easy way to relate a key to it's position on the keyboard, nor a way to support international keyboards.
 
     private KeyCode[] topRow = new KeyCode[] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P};
     private KeyCode[] middleRow = new KeyCode[] { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L};
@@ -35,6 +36,12 @@ public class JerkOff : MonoBehaviour
         float penisPower = 0f;
 
         bool incremented = false;
+
+        // Using the geometric distance formula, add to penisPower the reciprocal of the distance between the held key and the previous key's location.
+        // This is supposed to simulate going along the shaft rather than alternating pressing the farthest keys on the keyboard.
+        // If I wanted to disallow a person to just hold two keys down to increment penisPower I would need to add each pressed
+        // key to a list and wait for it be unheld to remove it from the list. As it is, my fear is that without this exploit,
+        // the game won't hold people's attentions long enough for them to finish.
 
         for(int a = 0; a < topRow.Length; a++)
         {

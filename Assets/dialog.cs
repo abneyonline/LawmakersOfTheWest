@@ -16,6 +16,9 @@ public class DialogLine
 
 public class dialog : MonoBehaviour
 {
+
+    // Unimplemented
+
     private static Color sensibleColor = new Color(0.5137f, 0.1098f, 0.1255f);
     private static Color lawmakerColor = new Color(0.2117f, 0.5961f, 0.8902f);
     private static Color NRAColor = new Color(0.8901f, 0.8471f, 0.2118f);
